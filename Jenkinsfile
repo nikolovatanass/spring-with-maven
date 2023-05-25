@@ -55,5 +55,10 @@ pipeline {
                 sh 'docker run -d -p 7000:8080 ${IMAGE_NAME}:${BUILD_NUMBER}'
            }
         }
+        stage('WebhookTest') {
+           steps {
+                echo 'TESTING WEBHOOK'
+           }
+        }
     }
 }
